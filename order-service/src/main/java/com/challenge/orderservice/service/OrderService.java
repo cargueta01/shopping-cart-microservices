@@ -35,10 +35,10 @@ public class OrderService {
 
         order.setDetails(details);
 
-        Double total = details.stream()
+        double total = details.stream()
                 .mapToDouble(d -> d.getUnitPrice() * d.getQuantity())
                 .sum();
-        order.setTotalAmount(total);
+        order.setTotalAmount(Math.round(total * 100.0) / 100.0);
 
         return orderRepository.save(order);
     }
