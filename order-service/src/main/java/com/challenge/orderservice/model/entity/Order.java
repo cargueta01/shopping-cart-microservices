@@ -1,5 +1,6 @@
 package com.challenge.orderservice.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.util.List;
@@ -19,5 +20,6 @@ public class Order {
 
     // Relation with details
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<OrderDetail> details;
 }
