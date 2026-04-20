@@ -34,13 +34,33 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"customerId\": -2,\n    \"items\": [\n        {\n            \"productId\": 1,\n            \"quantity\": 2,\n            \"price\": 101.95\n        },\n        {\n            \"productId\": 2,\n            \"quantity\": 1,\n            \"price\": 22.28\n        }\n    ]\n}",
+          "raw": "{\n    \"customerId\": 1,\n    \"items\": [\n        {\n            \"productId\": 1,\n            \"quantity\": 2,\n            \"price\": 111.95\n        },\n        {\n            \"productId\": 2,\n            \"quantity\": 1,\n            \"price\": 22.28\n        }\n    ]\n}",
           "options": {
             "raw": {
               "language": "json"
             }
           }
         },
+        "url": {
+          "raw": "http://localhost:8080/api/orders",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "orders"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Orders",
+      "request": {
+        "method": "GET",
+        "header": [],
         "url": {
           "raw": "http://localhost:8080/api/orders",
           "protocol": "http",
